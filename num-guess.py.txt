@@ -1,0 +1,68 @@
+
+
+import random
+
+rand_num = random.randint(1,100)
+
+
+
+
+import random
+
+attempt_list = []
+
+
+def start_game():
+    attempts = 0
+    rand_num = random.randint(1,100)
+    
+    
+    print("Hello, Welcome to the number guessing game!!")
+    name = input("What is your name? ")
+	
+  if guess == rand_num:
+                print('Nice! You got it!')
+                print(f'It took you {attempts} attempts')
+    
+    wanna_play = input(f"Hi, {name} , do you want to play the number guessing game? (Yes/No): " )
+    
+    if wanna_play.lower() != 'yes':
+        print("That\'s Cool, Thanks!!")
+        exit()
+        
+    while wanna_play.lower() == 'yes':
+        
+        guess = int(input("Pick a number between 1 and 100: "))
+    
+        
+        try:
+            if guess < 1 or guess > 100:
+                raise ValueError("Please guess a number within range 1-100")
+
+                
+                attempts += 1
+                attempts_list.append(attempts)
+                
+                
+                if guess == rand_num:
+                    print(f"Congratulations! You guessed the number {guess} in {attempts} attempts.")
+                    exit()
+                
+            else:
+                if guess > rand_num:
+                    print(rand_num)
+                    print('Try lower')
+                elif guess < rand_num:
+                    print('try higher')
+
+        except ValueError as err:
+            print('Not valid!!')
+                
+              
+
+
+start_game()   
+    
+    
+    
+    
